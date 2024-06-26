@@ -1,6 +1,77 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root.theme-light {
+  --accent-color: #ffffff;
+  --text-stroke-color: #ffffff;
+  --main-color: #000000;
+  --contour-color: #000000;
+  --text-weight: 400;
+  --title-weight: 700;
+  --hover-color: #ffffff;
+  --hover-bg-color: #ffffff;
+  --bg-page: repeating-linear-gradient(
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
+}
+
+:root.theme-dark {
+  --accent-color: #000000;
+  --text-stroke-color: #000000;
+  --contour-color: #00cc14;
+
+  --main-color: #00cc14;
+  --text-weight: 465;
+  --title-weight: 785;
+  --hover-color: #000000;
+  --hover-bg-color: #00cc14;
+  --bg-page: repeating-linear-gradient(
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#007f0c, #004306);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #000000;
+    --text-stroke-color: #000000;
+    --main-color: #00cc14;
+    --contour-color: #00cc14;
+    --text-weight: 465;
+    --title-weight: 785;
+    --hover-color: #000000;
+    --hover-bg-color: #00cc14;
+    --bg-page: repeating-linear-gradient(
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(#007f0c, #004306);
+  }
+}
