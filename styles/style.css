@@ -193,6 +193,7 @@
 }
 
 .image-container__label {
+  z-index: 1;
   position: absolute;
   opacity: 0.5;
   color: var(--main-color);
