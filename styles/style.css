@@ -46,7 +46,7 @@
 .button__text {
   position: relative;
   z-index: 1;
-  transition: all 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 .page {
@@ -55,12 +55,11 @@
   align-items: center;
   margin: 0 auto;
   -webkit-padding-before: 100px;
-          padding-block-start: 100px;
+  padding-block-start: 100px;
   -webkit-padding-after: 100px;
-          padding-block-end: 100px;
+  padding-block-end: 100px;
   color: var(--main-color);
   font-family: var(--main-font), sans-serif;
-  background-color: var(--accent-color);
   background-color: var(--accent-color);
   background-image: var(--bg-page);
   background-size: cover;
@@ -86,7 +85,7 @@
 
 .header__logo {
   -webkit-padding-after: 20px;
-          padding-block-end: 20px;
+  padding-block-end: 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 1;
 }
@@ -101,7 +100,7 @@
 
 .header__theme-menu {
   -webkit-padding-before: 23px;
-          padding-block-start: 23px;
+  padding-block-start: 23px;
 }
 
 .theme-menu__list {
@@ -109,11 +108,10 @@
   flex-direction: column;
   gap: 11px;
   -webkit-padding-start: 17px;
-          padding-inline-start: 17px;
+  padding-inline-start: 17px;
 }
 
 .theme-menu__button {
-  position: relative;
   position: relative;
   border: none;
   color: currentColor;
@@ -121,7 +119,7 @@
   line-height: 1;
   text-transform: uppercase;
   background-color: transparent;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -137,7 +135,7 @@
   content: '▶';
   position: absolute;
   -webkit-animation: moveX 0.5s ease-in-out infinite alternate;
-          animation: moveX 0.5s ease-in-out infinite alternate;
+  animation: moveX 0.5s ease-in-out infinite alternate;
   inset-inline-start: -17px;
 }
 
@@ -151,7 +149,7 @@
   position: absolute;
   opacity: 0;
   background-color: var(--main-color);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, inline-size 0.3s ease;
   block-size: 2px;
   inline-size: 0;
   inset-inline-start: 6px;
@@ -165,7 +163,7 @@
 
 .content {
   -webkit-padding-before: 100px;
-          padding-block-start: 100px;
+  padding-block-start: 100px;
   inline-size: var(--content-inline-size);
 }
 
@@ -181,7 +179,7 @@
 }
 .card__title {
   -webkit-border-after: 2px solid currentColor;
-          border-block-end: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
   padding: 3px 10px;
   font-size: 18px;
   line-height: 1.4;
@@ -223,61 +221,61 @@
   display: block;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
   aspect-ratio: 1 / 1;
 }
 
 .bulb-filter {
   -webkit-filter: brightness(0.9) contrast(1.5);
-          filter: brightness(0.9) contrast(1.5);
+  filter: brightness(0.9) contrast(1.5);
 }
 
 .blank-filter {
   -webkit-filter: saturate(1.8);
-          filter: saturate(1.8);
+  filter: saturate(1.8);
 }
 
 .cloud-filter {
   -webkit-filter: hue-rotate(-10deg);
-          filter: hue-rotate(-10deg);
+  filter: hue-rotate(-10deg);
 }
 
 .cat-filter {
   -webkit-filter: saturate(1.4) contrast(1.2);
-          filter: saturate(1.4) contrast(1.2);
+  filter: saturate(1.4) contrast(1.2);
 }
 
 .heart-filter {
   -webkit-filter: hue-rotate(5deg) saturate(1.4);
-          filter: hue-rotate(5deg) saturate(1.4);
+  filter: hue-rotate(5deg) saturate(1.4);
 }
 
 .compass-filter {
   -webkit-filter: hue-rotate(-20deg) brightness(1.1) contrast(1.4);
-          filter: hue-rotate(-20deg) brightness(1.1) contrast(1.4);
+  filter: hue-rotate(-20deg) brightness(1.1) contrast(1.4);
 }
 
 .hawk-filter {
   -webkit-filter: hue-rotate(-10deg) saturate(1.4);
-          filter: hue-rotate(-10deg) saturate(1.4);
+  filter: hue-rotate(-10deg) saturate(1.4);
 }
 
 .cherry-blossoms-filter {
   -webkit-filter: contrast(1.5) hue-rotate(-10deg) saturate(1.4);
-          filter: contrast(1.5) hue-rotate(-10deg) saturate(1.4);
+  filter: contrast(1.5) hue-rotate(-10deg) saturate(1.4);
 }
 
 .card__content {
   -webkit-border-before: 2px solid currentColor;
-          border-block-start: 2px solid currentColor;
+  border-block-start: 2px solid currentColor;
   padding: 25px;
 }
 
 .card__text {
   -webkit-padding-after: 25px;
-          padding-block-end: 25px;
+  padding-block-end: 25px;
   font-size: 18px;
   line-height: 1.18;
 }
@@ -297,7 +295,6 @@
   display: flex;
   justify-items: center;
   align-items: center;
-  border: none;
   border: 2px solid transparent;
   padding: 0;
   padding-top: 3px;
@@ -376,12 +373,12 @@
 
 .like-icon.is-liked .heart {
   -webkit-animation: changeScaleHeart 0.3s 0.1s ease-in alternate;
-          animation: changeScaleHeart 0.3s 0.1s ease-in alternate;
+  animation: changeScaleHeart 0.3s 0.1s ease-in alternate;
 }
 
 .like-icon.is-liked .sparks {
   -webkit-animation: changeSparksOpacity 0.3s 0.3s ease-in alternate;
-          animation: changeSparksOpacity 0.3s 0.3s ease-in alternate;
+  animation: changeSparksOpacity 0.3s 0.3s ease-in alternate;
 }
 
 .content__button {
@@ -389,7 +386,7 @@
   gap: 8px;
   margin: 50px auto 0px;
   -webkit-margin-before: 50px;
-          margin-block-start: 50px;
+  margin-block-start: 50px;
   padding: 15px 21px 15px 19px;
 }
 
