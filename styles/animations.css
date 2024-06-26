@@ -55,3 +55,13 @@
     opacity: 1;
   }
 }
+
+.like-icon.is-liked .heart {
+  -webkit-animation: changeScaleHeart 0.3s 0.1s ease-in alternate;
+  animation: changeScaleHeart 0.3s 0.1s ease-in alternate;
+}
+
+.like-icon.is-liked .sparks {
+  -webkit-animation: changeSparksOpacity 0.3s 0.3s ease-in alternate;
+  animation: changeSparksOpacity 0.3s 0.3s ease-in alternate;
+}

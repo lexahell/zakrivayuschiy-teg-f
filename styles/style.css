@@ -3,7 +3,7 @@
   align-items: center;
   border: 2px solid var(--main-color);
   padding: 0;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 0.9;
@@ -78,7 +78,7 @@
   border: 2px solid var(--main-color);
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 24px 0;
   color: var(--main-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   background-color: var(--accent-color);
   inline-size: var(--content-inline-size);
 }
@@ -112,6 +112,7 @@
 }
 
 .theme-menu__button {
+  cursor: pointer;
   position: relative;
   border: none;
   color: currentColor;
@@ -195,7 +196,7 @@
   position: absolute;
   opacity: 0.5;
   color: var(--main-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
@@ -325,60 +326,50 @@
 }
 
 .like-icon .contour {
-  transition: fill 0.1s ease;
+  transition: fill 0.1s linear;
 }
 
 .like-icon .core {
-  transition: fill 0.3s ease 0.03s;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon .main-body {
-  transition: fill 0.3s ease;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .core {
   fill: currentColor;
-  transition: fill 0.3s ease;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
   fill: currentColor;
-  transition: fill 0.3s ease 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:active .core {
   fill: var(--heart-color);
-  transition: fill 0.3s ease;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--heart-color);
-  transition: fill 0.3s ease 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart-color);
-  transition: fill 0.3s ease;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-color);
-  transition: fill 0.3s ease 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--heart-color);
-  transition: fill 0.3s ease 0.06s;
-}
-
-.like-icon.is-liked .heart {
-  -webkit-animation: changeScaleHeart 0.3s 0.1s ease-in alternate;
-  animation: changeScaleHeart 0.3s 0.1s ease-in alternate;
-}
-
-.like-icon.is-liked .sparks {
-  -webkit-animation: changeSparksOpacity 0.3s 0.3s ease-in alternate;
-  animation: changeSparksOpacity 0.3s 0.3s ease-in alternate;
+  transition: fill 0.3s linear 0.06s;
 }
 
 .content__button {
@@ -424,7 +415,7 @@
 }
 
 .continue-dialog__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
